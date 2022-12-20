@@ -1,25 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+import basicInfo from './components/basicInfo';
+import Hard from './components/Hard';
+/* VERY EASY */
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <h2>Rene Javier Santiago Novoa</h2>
+        <h2>787-600-9370</h2>
+        <h2>19/05/1998</h2>
+      </div>
+    )
+  }
 }
 
-export default App;
+
+
+/* EASY */
+export default class App extends Component {
+  constructor(props) {
+    
+    // Calling super class constructor
+    super(props);
+    
+    // Creating state
+    this.state = {
+    person: ''
+    }
+  render() {
+    return 
+  }
+}
+}
+
+
+/* MEDIUM */
+export default class App extends Component {
+  constructor(props) {
+    
+    // Calling super class constructor
+    super(props);
+    
+    // Creating state
+    this.state = {
+    person: 'Rene Javier Santiago Novoa, 787-600-9370, 10/05/1998'
+    }
+  render() {
+    return (
+      <div>
+      <basicInfo />
+      </div>
+    )
+  }
+}
+}
+
+/* HARD */
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Hard />
+      </div>
+    )
+  }
+}
